@@ -43,16 +43,6 @@ xui.Class('App', 'xui.Module',{
             
             append(
                 xui.create("xui.UI.Button")
-                .setHost(host,"xui_ui_button3")
-                .setLeft("12.19047619047619em")
-                .setTop("2.2857142857142856em")
-                .setWidth("2.9714285714285715em")
-                .setHeight("2.057142857142857em")
-                .setCaption("File")
-            );
-            
-            append(
-                xui.create("xui.UI.Button")
                 .setHost(host,"xui_ui_button10")
                 .setLeft("16em")
                 .setTop("2.2857142857142856em")
@@ -69,6 +59,30 @@ xui.Class('App', 'xui.Module',{
                         "event" : 1
                     },
                     "_xui_ui_button10_onclick"
+                ])
+            );
+            
+            append(
+                xui.create("xui.UI.Button")
+                .setHost(host,"xui_ui_button17")
+                .setLeft("10.666666666666666em")
+                .setTop("2.2857142857142856em")
+                .setCaption("File")
+                .setType("drop")
+                .onClick([
+                    {
+                        "desc" : "Action 1",
+                        "type" : "other",
+                        "target" : "msg",
+                        "args" : [
+                            "Test Test",
+                            "Hi",
+                            200,
+                            5000
+                        ],
+                        "method" : "message",
+                        "event" : 1
+                    }
                 ])
             );
             
